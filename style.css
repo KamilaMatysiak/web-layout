@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url(//db.onlinewebfonts.com/c/45ba45997328d4fd11a97a6a6ea3a8b3?family=Etelka+Medium+Pro);
+
+:root {
+    --background: #fdfdfd;
+    --event-background: #f4f4f4;
+
+    --primary: #019CDF;
+    --secondary: #565656;
+    --tertiary: #D7D9D8;
+
+    --headers: #019CDF;
+    --plain-text: #565656;
+    --contrast-text: #fdfdfd;
+
+    --table-background: #E6F5FC;
+    --table-secondary: #CFEDF8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: var(--background);
+    color: var(--plain-text);
+    font-size: 14px;
+}
+
+h1, h2 {
+    font-family: "Etelka Medium Pro", sans-serif;
+}
+
+.rects {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: calc(50% - 30px);
+    width: 55px;
+    height: 15px;
+}
+
+.blue {
+    background: var(--primary);
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.gray {
+    background: var(--secondary);
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    margin: 5px 10px;
+}
+
+.logo-title {
+    font-size: 1.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-subtitle {
+    letter-spacing: 0.2px;
+    padding-bottom: 5px;
+}
+
+.logo-title span {
+    color: var(--headers);
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-container .search-input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--secondary);
+    transform: scale(0.95);
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.search-container .search-input:focus {
+    outline: none;
+    border-bottom: 1.5px solid var(--primary);
+    transform: scale(1);
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.search-container .search-icon {
+    width: 15px;
+}
+
+.search-container .search-more {
+    color: var(--headers);
+    font-size: 0.7rem;
+    width: 100%;
+    margin: 0 10px;
+}
+
+nav .nav-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem auto;
+}
+
+nav .nav-buttons li {
+    border-left: 1px solid var(--secondary);
+    padding: 0 2rem;
+    color: var(--headers);
+    font-size: 1.1rem;
+}
+
+nav .nav-buttons li:first-child {
+    border-left: none;
+}
+
+hr {
+    margin: 1.5rem auto;
+    width: 70%;
+}
+
+.banner h2 {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.banner .icons li {
+    margin: 0 0.7rem;
+}
+
+.banner .icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 2rem auto;
+}
+
+.banner .icons li img {
+    height: 28px;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+}
+
+.content .airnews-title {
+    padding-top: 40px;
+    text-decoration: underline;
+
+}
+
+.content .airnews-title span,
+.img-banner .title span {
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+}
+
+.gray-backround {
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    z-index: -1;
+    background: var(--tertiary);
+}
+
+.events {
+    width: 80%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.events .event {
+    width: 24%;
+    min-width: 200px;
+    max-width: 250px;
+    min-height: 400px;
+    background: var(--event-background);
+    margin: 5px auto;
+    text-align: left;
+}
+
+.events .event .event-photo {
+    height: 40%;
+    width: 100%;
+    background: var(--secondary);
+}
+
+.events .event .event-date {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2px;
+    padding: 2px 10px;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.events .event .event-title {
+    text-decoration: underline;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--headers)
+}
+
+.events .event .event-content {
+    padding: 0 10px;
+    font-size: 0.7rem;
+}
+
+.ads {
+    background: var(--tertiary);
+    color: var(--contrast-text);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.temp-baner {
+    background-color: var(--secondary);
+    width: 100%;
+    height: 250px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.img-banner {
+    width: 80%;
+    height: 300px;
+    margin: 10px auto;
+    position: relative;
+}
+
+#banner-1 {
+    background-image: url(images/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#banner-2 {
+    background: var(--background);
+    background-image: url(images/banner2.webp);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: left;
+    color: var(--contrast-text);
+}
+
+#banner-2 .skew {
+    transform: skew(-10deg);
+    background: var(--background);
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    right: 0;
+    color: var(--plain-text);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-banner p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    
+}
+.img-banner h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#banner-1 .text {
+    width: 60%;
+    max-width: 450px;
+    text-align: left;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+}
+
+#banner-2 .text {
+    color: var(--plain-text);
+    width: 20vw;
+    max-width: 250px;
+    text-align: left;
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+}
+
+
+.img-banner .title {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    margin: 0 auto;
+    
+    font-weight: 100;
+    letter-spacing: 4px;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.table-back {
+    width: 100%;
+    margin-top: 30px;
+    background: var(--table-background);
+}
+
+.luggage-table {
+    width: 80%;
+    margin: auto;
+    border-top: 2px solid var(--secondary);
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+}
+
+.luggage-table img {
+    width: 5vw;
+    max-width: 100px;
+}
+
+.luggage-table th,
+.luggage-table td {
+    width: 1000px;
+    max-width: 250px;
+    border: 1px solid var(--secondary);
+    padding: 5px 10px;
+}
+
+.luggage-table thead th {
+    text-align: center;
+}
+
+.luggage-table thead th:first-child {
+    border-left: none;
+    max-width: 250px;
+    width: 250px;
+    position: relative;
+}
+
+.luggage-table .top {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-align: right;
+}
+
+.luggage-table hr {
+    transform: rotate(30deg);
+    width: 100%;
+}
+
+.luggage-table .bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    text-align: left;
+}
+
+.luggage-table tbody th {
+    text-align: left;
+}
+
+.luggage-table tr td:nth-child(11),
+.luggage-table thead th:nth-child(9) {
+    border-right: none;
+
+}
+
+.luggage-table tbody .small {
+    border-left: none;
+    max-width: 25px;
+    width: 25px;
+    padding: 0px 10px 0px 2px;
+}
+
+.luggage-table tbody tr:nth-child(2n) {
+    background: var(--table-secondary);
+}
+
+footer {
+    background: var(--secondary);
+    color: var(--contrast-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+footer .logo-container {
+    margin: 0 50px;
+}
+
+footer .logo-img {
+    width: 35px;
+}
+
+footer .logo-title {
+    font-size: 0.95rem;
+}
+
+footer .logo-subtitle {
+    font-size: 0.5rem;
+    padding: 0;
+}
+
+footer .footer-buttons {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer-buttons li {
+    font-size: 0.7rem;
+    padding: 0 15px;
+    border-left: 1px solid var(--contrast-text);
+}
+
+footer .footer-buttons li:first-child {
+    border: none;
+}
